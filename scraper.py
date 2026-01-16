@@ -17,6 +17,9 @@ SEEN_FILE = Path(__file__).parent / "seen_listings.json"
 # ntfy topic - environment variable veya default
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "klikenhuur-deniz")
 
+# Sadece bu şehirlerden ilan gelsin
+ALLOWED_CITIES = ["Nijmegen", "Arnhem"]
+
 def load_seen_listings():
     if not SEEN_FILE.exists():
         return {"seen_ids": [], "last_check": None}
@@ -55,16 +58,30 @@ def fetch_listings():
                 continue
 
             listing_id = id_match.group(1)
+
+            # Şehir (h4)
             city_el = panel.find('h4')
             city = city_el.get_text(strip=True) if city_el else ""
+
+            # Sokak (h3)
             street_el = panel.find('h3')
             street = street_el.get_text(strip=True) if street_el else ""
+
+            # Fiyat
             price_el = panel.find('p', class_='no-margin')
             price_text = price_el.get_text(strip=True) if price_el else ""
             price_match = re.search(r'€([\d.,]+)', price_text)
-            price = price_match.group(1).replace('.', '').replace(',', '.') if price_match else "?"
+            price = price_match.group(1) if price_match else "?"
 
-            area = "?"
+            # Müsaitlik tarihi
+            availability_el = panel.find('div', class_='text--s')
+            availability = availability_el.get_text(strip=True) if availability_el else ""
+            # "Beschikbaarheid: 01-apr-2026" -> "01-apr-2026"
+            availability = availability.replace("Beschikbaarheid:", "").strip()
+
+            # Oda tipi ve m2 (btn--light divleri)
+            room_type = ""
+            area = ""
             buttons = panel.find_all('div', class_='btn--light')
             for btn in buttons:
                 btn_text = btn.get_text(strip=True)
@@ -72,6 +89,18 @@ def fetch_listings():
                     area_match = re.search(r'([\d.,]+)', btn_text)
                     if area_match:
                         area = area_match.group(1)
+                elif btn_text in ['Kamer', 'Appartement', 'Studio']:
+                    room_type = btn_text
+
+            # Badge'ler (Gereserveerd, Short Stay, vb.)
+            badges = []
+            badge_wrapper = panel.find('div', class_='listing-item-badge-wrapper')
+            if badge_wrapper:
+                badge_divs = badge_wrapper.find_all('div', class_=re.compile(r'badge-'))
+                for badge_div in badge_divs:
+                    badge_text = badge_div.get_text(strip=True)
+                    if badge_text:
+                        badges.append(badge_text)
 
             listings.append({
                 'id': listing_id,
@@ -79,6 +108,9 @@ def fetch_listings():
                 'street': street,
                 'price': price,
                 'area': area,
+                'room_type': room_type,
+                'availability': availability,
+                'badges': badges,
                 'url': f"https://www.klikenhuur.nl{href}"
             })
 
@@ -93,8 +125,24 @@ def send_ntfy(new_listings):
         return
 
     for listing in new_listings:
-        title = f"Yeni: {listing['street']}, {listing['city']}"
-        message = f"Fiyat: EUR {listing['price']}/ay\nAlan: {listing['area']} m2"
+        title = f"{listing['street']}, {listing['city']}"
+
+        # Mesaj oluştur
+        lines = [
+            f"Fiyat: EUR {listing['price']}/ay",
+            f"Alan: {listing['area']} m2",
+        ]
+
+        if listing['room_type']:
+            lines.append(f"Tip: {listing['room_type']}")
+
+        if listing['availability']:
+            lines.append(f"Musait: {listing['availability']}")
+
+        if listing['badges']:
+            lines.append(f"Durum: {', '.join(listing['badges'])}")
+
+        message = "\n".join(lines)
 
         try:
             requests.post(
@@ -128,8 +176,10 @@ def main():
     new_listings = []
     for listing in listings:
         if listing['id'] not in seen_ids:
-            new_listings.append(listing)
             seen_ids.add(listing['id'])
+            # Sadece izin verilen şehirlerden bildirim gönder
+            if listing['city'] in ALLOWED_CITIES:
+                new_listings.append(listing)
 
     if new_listings:
         print(f"{len(new_listings)} YENI ILAN!")
