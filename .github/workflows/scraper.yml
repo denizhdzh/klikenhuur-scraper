@@ -1,0 +1,41 @@
+name: KlikEnHuur Scraper
+
+on:
+  schedule:
+    # Her 15 dakikada bir çalış
+    - cron: '*/15 * * * *'
+  workflow_dispatch: # Manuel çalıştırma
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Download previous seen listings
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          name: seen-listings
+          path: .
+          if_no_artifact_found: ignore
+
+      - name: Run scraper
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python scraper.py
+
+      - name: Upload seen listings
+        uses: actions/upload-artifact@v4
+        with:
+          name: seen-listings
+          path: seen_listings.json
+          retention-days: 90
