@@ -2,9 +2,8 @@ name: KlikEnHuur Scraper
 
 on:
   schedule:
-    # Her 15 dakikada bir çalış
     - cron: '*/15 * * * *'
-  workflow_dispatch: # Manuel çalıştırma
+  workflow_dispatch:
 
 jobs:
   scrape:
@@ -21,21 +20,15 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4
 
-      - name: Download previous seen listings
-        uses: dawidd6/action-download-artifact@v3
-        with:
-          name: seen-listings
-          path: .
-          if_no_artifact_found: ignore
-
       - name: Run scraper
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python scraper.py
 
-      - name: Upload seen listings
-        uses: actions/upload-artifact@v4
-        with:
-          name: seen-listings
-          path: seen_listings.json
-          retention-days: 90
+      - name: Commit seen listings
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add seen_listings.json
+          git diff --staged --quiet || git commit -m "Update seen listings"
+          git push
