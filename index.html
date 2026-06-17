@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nijmegen Studio & Werkruimte</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #0f0f0f;
+      color: #e8e8e8;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 32px 24px 24px;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 10px;
+      border-radius: 4px;
+      background: #1e1e1e;
+      border: 1px solid #333;
+      color: #aaa;
+    }
+
+    .updated {
+      font-size: 0.75rem;
+      color: #555;
+      margin-left: auto;
+    }
+
+    .count-bar {
+      padding: 12px 24px;
+      font-size: 0.78rem;
+      color: #555;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .count-bar span { color: #888; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1px;
+      background: #1a1a1a;
+      padding: 0;
+    }
+
+    .card {
+      background: #111;
+      transition: background 0.15s;
+    }
+
+    .card:hover { background: #161616; }
+
+    .card a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+      padding: 20px;
+    }
+
+    .card-source {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .src-marktplaats    { color: #e53935; }
+    .src-companyspace   { color: #1e88e5; }
+    .src-fundainbusiness { color: #fb8c00; }
+
+    .card-title {
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: #d0d0d0;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+
+    .card-stats {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 14px;
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 0.68rem;
+      color: #555;
+      margin-top: 1px;
+    }
+
+    .card-footer {
+      font-size: 0.7rem;
+      color: #444;
+      padding-top: 12px;
+      border-top: 1px solid #1e1e1e;
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 80px 24px;
+      color: #444;
+      font-size: 0.9rem;
+    }
+
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px;
+      color: #333;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nijmegen Studio & Werkruimte</h1>
+  <div class="meta">
+    <span class="tag">Nijmegen</span>
+    <span class="tag">Max €600/m</span>
+    <span class="tag">Min 15 m²</span>
+    <span class="tag">Marktplaats</span>
+    <span class="tag">CompanySpace</span>
+    <span class="tag">Funda Bedrijf</span>
+    <span class="updated" id="updated">—</span>
+  </div>
+</header>
+
+<div class="count-bar" id="count-bar">&nbsp;</div>
+
+<div class="grid" id="grid">
+  <div class="loading">Laden...</div>
+</div>
+
+<script>
+const SRC = {
+  marktplaats:     { label: 'Marktplaats',      cls: 'src-marktplaats' },
+  companyspace:    { label: 'CompanySpace',      cls: 'src-companyspace' },
+  fundainbusiness: { label: 'Funda in Business', cls: 'src-fundainbusiness' },
+};
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+
+function renderCard(l) {
+  const src = SRC[l.source] || { label: l.source, cls: '' };
+
+  const price = l.price != null
+    ? `<div><div class="stat-value">€${Math.round(l.price)}</div><div class="stat-label">per maand</div></div>`
+    : `<div><div class="stat-value" style="color:#444">—</div><div class="stat-label">prijs onbekend</div></div>`;
+
+  const area = l.area != null
+    ? `<div><div class="stat-value">${Math.round(l.area)} m²</div><div class="stat-label">oppervlakte</div></div>`
+    : '';
+
+  return `
+    <div class="card">
+      <a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">
+        <div class="card-source ${src.cls}">${src.label}</div>
+        <div class="card-title">${esc(l.title)}</div>
+        <div class="card-stats">${price}${area}</div>
+        <div class="card-footer">Gevonden op ${esc(l.found_at || '—')}</div>
+      </a>
+    </div>`;
+}
+
+async function load() {
+  try {
+    const res = await fetch('./listings.json?' + Date.now());
+    if (!res.ok) throw new Error(res.status);
+    const data = await res.json();
+
+    document.getElementById('updated').textContent =
+      data.last_updated ? `Bijgewerkt: ${data.last_updated}` : '';
+
+    const listings = data.listings || [];
+    document.getElementById('count-bar').textContent =
+      `${listings.length} beschikbare ruimte${listings.length !== 1 ? 'n' : ''}`;
+
+    const grid = document.getElementById('grid');
+    if (listings.length === 0) {
+      grid.innerHTML = '<div class="empty-state">Geen ruimtes gevonden op dit moment.</div>';
+    } else {
+      grid.innerHTML = listings.map(renderCard).join('');
+    }
+  } catch (e) {
+    document.getElementById('grid').innerHTML =
+      '<div class="empty-state">Kon listings niet laden.</div>';
+    console.error(e);
+  }
+}
+
+load();
+</script>
+</body>
+</html>

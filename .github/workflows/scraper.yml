@@ -1,8 +1,8 @@
-name: KlikEnHuur Scraper
+name: Werkruimte Scraper
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -17,18 +17,21 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install requests beautifulsoup4
+      - name: Install Python dependencies
+        run: pip install requests beautifulsoup4 playwright
+
+      - name: Install Playwright browser
+        run: playwright install chromium --with-deps
 
       - name: Run scraper
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python scraper.py
 
-      - name: Commit seen listings
+      - name: Commit updated files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add seen_listings.json
-          git diff --staged --quiet || git commit -m "Update seen listings"
+          git add seen_listings.json listings.json
+          git diff --staged --quiet || git commit -m "Update listings"
           git push
