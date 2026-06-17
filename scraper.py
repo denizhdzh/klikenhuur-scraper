@@ -152,76 +152,69 @@ def fetch_marktplaats():
 
 
 # ---------------------------------------------------------------------------
-# FundaInBusiness  (Playwright — Cloudflare bypass)
+# FundaInBusiness  (curl_cffi — Chrome TLS impersonation, bypasses Cloudflare)
 # ---------------------------------------------------------------------------
 
 def fetch_fundainbusiness():
     listings = []
 
     try:
-        from playwright.sync_api import sync_playwright
+        from curl_cffi import requests as curl_requests
     except ImportError:
-        print("  FundaInBusiness: playwright yuklu degil, atlaniyor")
+        print("  FundaInBusiness: curl_cffi yuklu degil, atlaniyor")
         return listings
 
     url = "https://www.fundainbusiness.nl/alle-bedrijfsaanbod/nijmegen/huur/sorteer-datum-af/"
 
     try:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True, args=["--no-sandbox", "--disable-setuid-sandbox"])
-            context = browser.new_context(
-                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                locale="nl-NL",
-            )
-            page = context.new_page()
+        resp = curl_requests.get(
+            url,
+            impersonate="chrome136",
+            headers={"Accept-Language": "nl-NL,nl;q=0.9"},
+            timeout=30,
+        )
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
 
-            # Stealth: hide webdriver flag
-            page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-
-            page.goto(url, wait_until="networkidle", timeout=60000)
-            page.wait_for_timeout(2000)
-
-            html = page.content()
-            browser.close()
-
-        soup = BeautifulSoup(html, "html.parser")
-
-        # Try multiple selectors for listing cards
-        cards = soup.find_all("div", attrs={"data-object-url-title": True})
-
-        if not cards:
-            # Fallback: find all links pointing to individual listings
-            cards = soup.find_all("a", href=re.compile(r"/bedrijfsaanbod/\d+"))
+        # <li class="search-result"> — both regular and promo cards
+        cards = soup.find_all("li", attrs={"data-search-result-listing": True})
 
         for card in cards:
-            a = card if card.name == "a" else card.find("a", href=re.compile(r"/bedrijfsaanbod/\d+"))
+            listing_id_attr = card.get("data-global-id", "")
+            if not listing_id_attr:
+                continue
+            listing_id = f"funda_{listing_id_attr}"
+
+            # Canonical link (first anchor with object- in href)
+            a = card.find("a", href=re.compile(r"/object-\d+"))
             if not a:
                 continue
+            href = a.get("href", "").split("?")[0]
 
-            href = a.get("href", "")
-            id_match = re.search(r"/(\d+)", href)
-            if not id_match:
-                continue
+            # Title: h2 with address
+            title_el = card.find("h2", class_="search-result__header-title")
+            prop_type_el = card.find("h4", class_="search-result__header-subtitle")
+            title = (title_el.get_text(strip=True) if title_el else href)[:120]
+            if prop_type_el:
+                title = f"{prop_type_el.get_text(strip=True)} - {title}"
 
-            listing_id = f"funda_{id_match.group(1)}"
-            full_text = card.get_text(" ", strip=True)
-
-            title_el = card.find(["h2", "h3", "h4"], class_=re.compile(r"title|adres|object|street", re.IGNORECASE))
-            title = (title_el.get_text(strip=True) if title_el else full_text[:120])[:120]
-
+            # Price: .search-result-price → "€ 2.080 /mnd"
             price = None
-            price_m = re.search(r"€\s*([\d.,]+)", full_text)
-            if price_m:
-                price = parse_price(price_m.group(0))
+            price_el = card.find(class_="search-result-price")
+            if price_el:
+                price = parse_price(price_el.get_text())
 
-            area = parse_area(full_text)
+            # Area: .search-result-kenmerken li span → "88 m²"
+            area = None
+            kenmerken = card.find(class_="search-result-kenmerken")
+            if kenmerken:
+                area = parse_area(kenmerken.get_text())
 
-            img_tag = card.find("img")
+            # Image: first img inside search-result-image or promo-thumbnail
             image = None
+            img_tag = card.find("img")
             if img_tag:
                 image = img_tag.get("src") or img_tag.get("data-src")
-                if image and image.startswith("//"):
-                    image = "https:" + image
 
             full_url = f"https://www.fundainbusiness.nl{href}" if href.startswith("/") else href
 
@@ -291,7 +284,11 @@ def send_ntfy(new_listings):
             requests.post(
                 f"https://ntfy.sh/{NTFY_TOPIC}",
                 data="\n".join(lines).encode("utf-8"),
-                headers={"Title": title, "Click": l["url"], "Tags": "office"},
+                headers={
+                    "Title": title.encode("ascii", errors="replace").decode("ascii"),
+                    "Click": l["url"],
+                    "Tags": "office",
+                },
             )
             print(f"  Bildirim: {title}")
         except Exception as e:
