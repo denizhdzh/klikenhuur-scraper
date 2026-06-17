@@ -18,7 +18,7 @@ LISTINGS_FILE = Path(__file__).parent / "listings.json"
 
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "klikenhuur-deniz")
 
-MAX_PRICE = 700
+MAX_PRICE = 1000
 MIN_AREA = 15
 
 EXCLUDE_KEYWORDS = [
