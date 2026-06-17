@@ -137,58 +137,6 @@ def fetch_marktplaats():
 
 
 # ---------------------------------------------------------------------------
-# CompanySpace
-# ---------------------------------------------------------------------------
-
-def fetch_companyspace():
-    listings = []
-    url = "https://www.companyspace.com/netherlands/commercial-space-rent/nijmegen/"
-
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=30)
-        if resp.status_code != 200:
-            print(f"  CompanySpace: HTTP {resp.status_code}")
-            return listings
-
-        soup = BeautifulSoup(resp.text, "html.parser")
-
-        for a in soup.find_all("a", href=re.compile(r"/rent/.+/nijmegen/\d+")):
-            href = a.get("href", "")
-            id_match = re.search(r"/(\d+)", href)
-            if not id_match:
-                continue
-
-            listing_id = f"cs_{id_match.group(1)}"
-            full_text = a.get_text(" ", strip=True)
-
-            h4 = a.find("h4")
-            title = (h4.get_text(strip=True) if h4 else full_text[:120])[:120]
-
-            price = None
-            price_m = re.search(r"(?:Rent|EUR)[:\s]+Ca\.\s*([\d,]+)", full_text, re.IGNORECASE)
-            if price_m:
-                price = parse_price(price_m.group(1))
-
-            area = parse_area(title) or parse_area(full_text)
-
-            listings.append({
-                "id": listing_id,
-                "source": "companyspace",
-                "title": title,
-                "price": price,
-                "area": area,
-                "url": f"https://www.companyspace.com{href}" if href.startswith("/") else href,
-                "found_at": datetime.now().strftime("%Y-%m-%d"),
-            })
-
-    except Exception as e:
-        print(f"  CompanySpace hata: {e}")
-
-    print(f"  CompanySpace: {len(listings)} ilan")
-    return listings
-
-
-# ---------------------------------------------------------------------------
 # FundaInBusiness  (Playwright — Cloudflare bypass)
 # ---------------------------------------------------------------------------
 
@@ -201,7 +149,7 @@ def fetch_fundainbusiness():
         print("  FundaInBusiness: playwright yuklu degil, atlaniyor")
         return listings
 
-    url = "https://www.fundainbusiness.nl/alle-bedrijfsaanbod/nijmegen/huur/0-1000/permaand/sorteer-datum-af/"
+    url = "https://www.fundainbusiness.nl/alle-bedrijfsaanbod/nijmegen/huur/sorteer-datum-af/"
 
     try:
         with sync_playwright() as p:
@@ -342,9 +290,6 @@ def main():
 
     print("Marktplaats...")
     all_listings.extend(fetch_marktplaats())
-
-    print("CompanySpace...")
-    all_listings.extend(fetch_companyspace())
 
     print("FundaInBusiness...")
     all_listings.extend(fetch_fundainbusiness())
