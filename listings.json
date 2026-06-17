@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18 00:02:42",
+  "last_updated": "2026-06-18 00:04:02",
   "listings": [
     {
       "id": "mp_m2403167074",
@@ -132,6 +132,16 @@
       "found_at": "2026-06-18"
     },
     {
+      "id": "funda_8023843",
+      "source": "fundainbusiness",
+      "title": "Winkel|Kantoor - Wintersoord 5, Nijmegen",
+      "price": null,
+      "area": 80.0,
+      "image": "https://cloud.funda.nl/valentina_media/229/724/039_720x480.jpg",
+      "url": "https://www.fundainbusiness.nl/winkel/nijmegen/object-44478206-wintersoord-5/",
+      "found_at": "2026-06-18"
+    },
+    {
       "id": "funda_8022142",
       "source": "fundainbusiness",
       "title": "Kantoor - Kerkenbos 1230-A, Nijmegen",
@@ -139,6 +149,16 @@
       "area": 120.0,
       "image": "https://cloud.funda.nl/valentina_media/229/653/754_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44477505-kerkenbos-1230-a/",
+      "found_at": "2026-06-18"
+    },
+    {
+      "id": "funda_8021808",
+      "source": "fundainbusiness",
+      "title": "Kantoor|Bedrijfshal - Joubertstraat 140, Nijmegen",
+      "price": null,
+      "area": 438.0,
+      "image": "https://cloud.funda.nl/valentina_media/229/638/504_720x480.jpg",
+      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44476261-joubertstraat-140/",
       "found_at": "2026-06-18"
     },
     {

@@ -164,7 +164,7 @@ def fetch_fundainbusiness():
         print("  FundaInBusiness: curl_cffi yuklu degil, atlaniyor")
         return listings
 
-    url = "https://www.fundainbusiness.nl/alle-bedrijfsaanbod/nijmegen/huur/sorteer-datum-af/"
+    url = "https://www.fundainbusiness.nl/alle-bedrijfsaanbod/nijmegen/huur/permaand/sorteer-datum-af/"
 
     try:
         resp = curl_requests.get(
