@@ -204,7 +204,7 @@ def fetch_fundainbusiness():
             price_el = card.find(class_="search-result-price")
             if price_el:
                 price_text = price_el.get_text()
-                if "m²" not in price_text and "m2" not in price_text.lower() and "/m" not in price_text:
+                if "/m²" not in price_text and "/m2" not in price_text.lower():
                     price = parse_price(price_text)
 
             # Area: .search-result-kenmerken li span → "88 m²"

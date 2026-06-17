@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18 00:04:02",
+  "last_updated": "2026-06-18 00:11:12",
   "listings": [
     {
       "id": "mp_m2403167074",
@@ -32,143 +32,23 @@
       "found_at": "2026-06-18"
     },
     {
-      "id": "funda_8048674",
-      "source": "fundainbusiness",
-      "title": "Kantoor - Stationsstraat 31, Nijmegen",
-      "price": null,
-      "area": 632.0,
-      "image": "https://cloud.funda.nl/valentina_media/230/721/902_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44493037-stationsstraat-31/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8048270",
-      "source": "fundainbusiness",
-      "title": "Winkel met showroom - Marikenstraat 17-19, Nijmegen",
-      "price": null,
-      "area": 291.0,
-      "image": "https://cloud.funda.nl/valentina_media/230/704/472_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/winkel/nijmegen/object-44493633-marikenstraat-17-19/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8046790",
-      "source": "fundainbusiness",
-      "title": "Kantoor - Molenveldlaan 10-170, Nijmegen",
-      "price": null,
-      "area": 88.0,
-      "image": "https://cloud.funda.nl/valentina_media/230/650/224_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44491153-molenveldlaan-10-170/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8041701",
-      "source": "fundainbusiness",
-      "title": "Bedrijfshal - van Rosenburgweg 182, Nijmegen",
-      "price": null,
-      "area": 136.0,
-      "image": "https://cloud.funda.nl/valentina_media/230/452/672_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44496164-van-rosenburgweg-182/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8037450",
-      "source": "fundainbusiness",
-      "title": "Kantoor - Berg en Dalseweg 101, Nijmegen",
-      "price": null,
-      "area": 35.0,
-      "image": "https://cloud.funda.nl/valentina_media/230/280/936_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-80846459-berg-en-dalseweg-101/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8029135",
-      "source": "fundainbusiness",
-      "title": "Kantoor - Arsenaalpoort 16, Nijmegen",
-      "price": null,
-      "area": 220.0,
-      "image": "https://cloud.funda.nl/valentina_media/229/934/080_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44474598-arsenaalpoort-16/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8028784",
-      "source": "fundainbusiness",
-      "title": "Kantoor - Kerkenbos 1079-H, Nijmegen",
-      "price": null,
-      "area": 115.0,
-      "image": "https://cloud.funda.nl/valentina_media/229/920/048_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44473147-kerkenbos-1079-h/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8027608",
-      "source": "fundainbusiness",
-      "title": "Kantoor - Kerkenbos 10141, Nijmegen",
-      "price": null,
-      "area": 350.0,
-      "image": "https://cloud.funda.nl/valentina_media/229/872/912_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44472061-kerkenbos-10141/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8024768",
-      "source": "fundainbusiness",
-      "title": "Kantoor - Berg en Dalseweg 7, Nijmegen",
-      "price": null,
-      "area": 114.0,
-      "image": "https://cloud.funda.nl/valentina_media/229/759/207_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44479121-berg-en-dalseweg-7/",
-      "found_at": "2026-06-18"
-    },
-    {
       "id": "funda_8023849",
       "source": "fundainbusiness",
       "title": "Kantoor - Bredestraat 170, Nijmegen",
-      "price": null,
+      "price": 626.0,
       "area": 47.0,
       "image": "https://cloud.funda.nl/valentina_media/229/724/336_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44478202-bredestraat-170/",
       "found_at": "2026-06-18"
     },
     {
-      "id": "funda_8023843",
-      "source": "fundainbusiness",
-      "title": "Winkel|Kantoor - Wintersoord 5, Nijmegen",
-      "price": null,
-      "area": 80.0,
-      "image": "https://cloud.funda.nl/valentina_media/229/724/039_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/winkel/nijmegen/object-44478206-wintersoord-5/",
-      "found_at": "2026-06-18"
-    },
-    {
       "id": "funda_8022142",
       "source": "fundainbusiness",
       "title": "Kantoor - Kerkenbos 1230-A, Nijmegen",
-      "price": null,
+      "price": 97.0,
       "area": 120.0,
       "image": "https://cloud.funda.nl/valentina_media/229/653/754_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44477505-kerkenbos-1230-a/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8021808",
-      "source": "fundainbusiness",
-      "title": "Kantoor|Bedrijfshal - Joubertstraat 140, Nijmegen",
-      "price": null,
-      "area": 438.0,
-      "image": "https://cloud.funda.nl/valentina_media/229/638/504_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44476261-joubertstraat-140/",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "funda_8018995",
-      "source": "fundainbusiness",
-      "title": "Bedrijfshal - Griftdijk 147, Nijmegen",
-      "price": null,
-      "area": 229.0,
-      "image": "https://cloud.funda.nl/valentina_media/229/522/806_720x480.jpg",
-      "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44463358-griftdijk-147/",
       "found_at": "2026-06-18"
     }
   ]
