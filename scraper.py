@@ -199,10 +199,13 @@ def fetch_fundainbusiness():
                 title = f"{prop_type_el.get_text(strip=True)} - {title}"
 
             # Price: .search-result-price → "€ 2.080 /mnd"
+            # Skip per-m² prices like "€ 350 /m²/jaar" — those are not monthly totals
             price = None
             price_el = card.find(class_="search-result-price")
             if price_el:
-                price = parse_price(price_el.get_text())
+                price_text = price_el.get_text()
+                if "m²" not in price_text and "m2" not in price_text.lower() and "/m" not in price_text:
+                    price = parse_price(price_text)
 
             # Area: .search-result-kenmerken li span → "88 m²"
             area = None
