@@ -1,31 +1,94 @@
 {
-  "last_updated": "2026-06-17 21:43:11",
+  "last_updated": "2026-06-17 23:59:14",
   "listings": [
     {
       "id": "mp_m2403167074",
       "source": "marktplaats",
-      "title": "Bedrijfsruimte te huur Nijmegen/ Weurt De vlotkampwegTe huur – representatief bedrijfspand met kantoorruimtes, bedrijfsl",
+      "title": "Bedrijfsruimte te huur Nijmegen/ Weurt De vlotkampweg",
       "price": null,
       "area": null,
+      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52ce026e-f82c-42d0-8886-c62fb4f96582?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2403167074-bedrijfsruimte-te-huur-nijmegen-weurt-de-vlotkampweg",
       "found_at": "2026-06-17"
     },
     {
       "id": "mp_m2395369859",
       "source": "marktplaats",
-      "title": "Te huur bedrijfsruimte in Druten, vlakbij Nijmegen en TielTe huur: op een prachtige zichtlocatie in druten, vlakbij nijm",
+      "title": "Te huur bedrijfsruimte in Druten, vlakbij Nijmegen en Tiel",
       "price": 575.0,
       "area": 56.0,
+      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3749c4b0-5b76-43e1-8afa-d56315896a23?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2395369859-te-huur-bedrijfsruimte-in-druten-vlakbij-nijmegen-en-tiel",
       "found_at": "2026-06-17"
     },
     {
       "id": "mp_m2410851175",
       "source": "marktplaats",
-      "title": "Bedrijfshal 30m² met Hoge Plafonds en RoldeurDeze veelzijdige bedrijfshal van 30m² (6x5 meter) beschikt over een indrukw",
+      "title": "Bedrijfshal 30m² met Hoge Plafonds en Roldeur",
       "price": 490.0,
       "area": 30.0,
+      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9b0bd207-91c8-4061-8f7d-79da58b9c187?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2410851175-bedrijfshal-30m2-met-hoge-plafonds-en-roldeur",
+      "found_at": "2026-06-17"
+    },
+    {
+      "id": "funda_8048674",
+      "source": "fundainbusiness",
+      "title": "Kantoor - Stationsstraat 31, Nijmegen",
+      "price": 110.0,
+      "area": 632.0,
+      "image": "https://cloud.funda.nl/valentina_media/230/721/902_720x480.jpg",
+      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44493037-stationsstraat-31/",
+      "found_at": "2026-06-17"
+    },
+    {
+      "id": "funda_8048270",
+      "source": "fundainbusiness",
+      "title": "Winkel met showroom - Marikenstraat 17-19, Nijmegen",
+      "price": 350.0,
+      "area": 291.0,
+      "image": "https://cloud.funda.nl/valentina_media/230/704/472_720x480.jpg",
+      "url": "https://www.fundainbusiness.nl/winkel/nijmegen/object-44493633-marikenstraat-17-19/",
+      "found_at": "2026-06-17"
+    },
+    {
+      "id": "funda_8029135",
+      "source": "fundainbusiness",
+      "title": "Kantoor - Arsenaalpoort 16, Nijmegen",
+      "price": 175.0,
+      "area": 220.0,
+      "image": "https://cloud.funda.nl/valentina_media/229/934/080_720x480.jpg",
+      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44474598-arsenaalpoort-16/",
+      "found_at": "2026-06-17"
+    },
+    {
+      "id": "funda_8027608",
+      "source": "fundainbusiness",
+      "title": "Kantoor - Kerkenbos 10141, Nijmegen",
+      "price": 85.0,
+      "area": 350.0,
+      "image": "https://cloud.funda.nl/valentina_media/229/872/912_720x480.jpg",
+      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44472061-kerkenbos-10141/",
+      "found_at": "2026-06-17"
+    },
+    {
+      "id": "funda_8023849",
+      "source": "fundainbusiness",
+      "title": "Kantoor - Bredestraat 170, Nijmegen",
+      "price": 160.0,
+      "area": 47.0,
+      "image": "https://cloud.funda.nl/valentina_media/229/724/336_720x480.jpg",
+      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44478202-bredestraat-170/",
+      "found_at": "2026-06-17"
+    },
+    {
+      "id": "funda_8022142",
+      "source": "fundainbusiness",
+      "title": "Kantoor - Kerkenbos 1230-A, Nijmegen",
+      "price": 97.0,
+      "area": 120.0,
+      "image": "https://cloud.funda.nl/valentina_media/229/653/754_720x480.jpg",
+      "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44477505-kerkenbos-1230-a/",
       "found_at": "2026-06-17"
     }
   ]
