@@ -18,8 +18,13 @@ LISTINGS_FILE = Path(__file__).parent / "listings.json"
 
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "klikenhuur-deniz")
 
-MAX_PRICE = 600
+MAX_PRICE = 700
 MIN_AREA = 15
+
+EXCLUDE_KEYWORDS = [
+    "opslagruimte", "opslag", "loods", "magazijn", "warehouse",
+    "garagebox", "garage", "parking", "stalling",
+]
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -279,6 +284,9 @@ def apply_filters(listings):
         if price is not None and price > MAX_PRICE:
             continue
         if area is not None and area < MIN_AREA:
+            continue
+        title_lower = l.get("title", "").lower()
+        if any(kw in title_lower for kw in EXCLUDE_KEYWORDS):
             continue
         out.append(l)
     return out
