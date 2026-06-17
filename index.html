@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio & Werkruimte — Nijmegen</title>
+  <title>Nijmegen Studio & Werkruimte</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #111;
-      --card: #1a1a1a;
-      --card-hover: #1f1f1f;
-      --border: #2a2a2a;
-      --text: #f0f0f0;
-      --muted: #666;
-      --faint: #222;
-      --mp: #ff4d4d;
-      --funda: #ff9f40;
-      --green: #4ade80;
+      --bg: #f7f6f3;
+      --surface: #ffffff;
+      --border: #e8e6e1;
+      --text: #1a1a18;
+      --muted: #888680;
+      --faint: #f0efe9;
+      --mp: #d93025;
+      --funda: #e8790a;
+      --accent: #2c6ef2;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
@@ -29,56 +28,64 @@
 
     /* ── Header ── */
     header {
-      padding: 40px 32px 28px;
+      background: var(--surface);
       border-bottom: 1px solid var(--border);
+      padding: 28px 32px 20px;
+    }
+
+    .header-top {
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: space-between;
-      flex-wrap: wrap;
       gap: 16px;
+      flex-wrap: wrap;
     }
 
-    .header-left h1 {
-      font-size: clamp(1.5rem, 4vw, 2.2rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1.1;
+    header h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
     }
 
-    .header-left h1 em {
-      font-style: normal;
+    header h1 span {
       color: var(--muted);
+      font-weight: 400;
     }
 
-    .header-pills {
+    .header-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
       margin-top: 14px;
     }
 
     .pill {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 4px 11px;
+      border-radius: 20px;
       background: var(--faint);
       border: 1px solid var(--border);
       color: var(--muted);
     }
 
-    .pill-mp    { color: var(--mp);    border-color: #3a1f1f; background: #1f1515; }
-    .pill-funda { color: var(--funda); border-color: #3a2a1a; background: #1f1a10; }
-
-    .header-right {
-      text-align: right;
+    .pill-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: currentColor;
     }
 
-    #updated {
+    .pill.mp   { color: var(--mp);    background: #fff1f0; border-color: #fcc; }
+    .pill.funda { color: var(--funda); background: #fff8f0; border-color: #fdd; }
+
+    .updated-text {
       font-size: 0.72rem;
       color: var(--muted);
+      margin-top: 10px;
     }
 
     /* ── Toolbar ── */
@@ -87,51 +94,62 @@
       align-items: center;
       justify-content: space-between;
       padding: 12px 32px;
+      background: var(--surface);
       border-bottom: 1px solid var(--border);
       gap: 12px;
       flex-wrap: wrap;
     }
 
     #count-label {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--muted);
     }
 
-    #count-label b { color: var(--text); }
+    #count-label strong { color: var(--text); }
 
     .sort-wrap {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 0.75rem;
+      gap: 6px;
+      font-size: 0.78rem;
       color: var(--muted);
     }
 
     #sort-select {
-      font-size: 0.75rem;
-      background: var(--faint);
+      font-size: 0.78rem;
       border: 1px solid var(--border);
-      color: var(--text);
       border-radius: 6px;
-      padding: 5px 10px;
+      padding: 4px 8px;
+      background: var(--surface);
+      color: var(--text);
       cursor: pointer;
     }
 
     /* ── Grid ── */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1px;
-      background: var(--border);
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      padding: 24px 32px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     /* ── Card ── */
     .card {
-      background: var(--card);
-      transition: background 0.15s;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.15s, transform 0.15s;
+      display: flex;
+      flex-direction: column;
     }
 
-    .card:hover { background: var(--card-hover); }
+    .card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
 
     .card a {
       display: flex;
@@ -141,168 +159,156 @@
       color: inherit;
     }
 
-    /* Image */
-    .card-img-wrap {
-      position: relative;
+    /* Image area */
+    .card-img {
       width: 100%;
-      aspect-ratio: 3/2;
-      overflow: hidden;
-      background: #1e1e1e;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--faint);
+      display: block;
       flex-shrink: 0;
     }
 
-    .card-img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s;
-    }
-
-    .card:hover .card-img { transform: scale(1.03); }
-
     .card-img-placeholder {
-      width: 100%; height: 100%;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--faint);
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
-    .card-img-placeholder svg { opacity: 0.1; }
-
-    .price-badge {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(0,0,0,0.82);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 6px;
-      padding: 5px 10px;
-      font-size: 1rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #fff;
+    .card-img-placeholder svg {
+      opacity: 0.18;
     }
-
-    .price-badge.unknown {
-      color: var(--muted);
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-
-    .source-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 0.6rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 3px 8px;
-      border-radius: 4px;
-      background: rgba(0,0,0,0.75);
-      backdrop-filter: blur(4px);
-    }
-
-    .src-marktplaats    { color: var(--mp); }
-    .src-fundainbusiness { color: var(--funda); }
 
     /* Body */
     .card-body {
-      padding: 14px 16px 16px;
+      padding: 16px;
+      flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      flex: 1;
+      gap: 10px;
     }
 
-    .card-title {
-      font-size: 0.85rem;
-      font-weight: 500;
-      line-height: 1.45;
-      color: #ccc;
-    }
-
-    .card-meta {
+    .card-header-row {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-top: auto;
+      justify-content: space-between;
     }
 
-    .area-tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--green);
-      background: #0f2318;
-      border: 1px solid #1a3a25;
+    .source-badge {
+      font-size: 0.63rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
       padding: 2px 8px;
       border-radius: 4px;
     }
 
-    .date-tag {
-      font-size: 0.7rem;
+    .badge-marktplaats    { background: #fff1f0; color: var(--mp); }
+    .badge-fundainbusiness { background: #fff8f0; color: var(--funda); }
+
+    .card-date {
+      font-size: 0.68rem;
       color: var(--muted);
-      margin-left: auto;
     }
 
-    /* ── State ── */
-    .state {
+    .card-title {
+      font-size: 0.88rem;
+      font-weight: 500;
+      line-height: 1.45;
+      color: var(--text);
+      flex: 1;
+    }
+
+    .card-stats {
+      display: flex;
+      gap: 16px;
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat {}
+
+    .stat-value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .stat-value.unknown { color: #ccc; font-size: 1rem; }
+
+    .stat-label {
+      font-size: 0.67rem;
+      color: var(--muted);
+      margin-top: 1px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Empty / Loading ── */
+    .state-full {
       grid-column: 1 / -1;
       text-align: center;
-      padding: 100px 24px;
+      padding: 80px 24px;
       color: var(--muted);
       font-size: 0.9rem;
     }
 
     /* ── Responsive ── */
     @media (max-width: 600px) {
-      header { padding: 24px 16px 20px; }
-      .toolbar { padding: 10px 16px; }
+      header, .toolbar { padding-left: 16px; padding-right: 16px; }
+      .grid { padding: 16px; gap: 12px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="header-left">
-    <h1>Studio &amp; Werkruimte<br><em>Nijmegen</em></h1>
-    <div class="header-pills">
-      <span class="pill">Max €700/m</span>
-      <span class="pill">Min 15 m²</span>
-      <span class="pill pill-mp">Marktplaats</span>
-      <span class="pill pill-funda">Funda in Business</span>
+  <div class="header-top">
+    <div>
+      <h1>Nijmegen <span>/</span> Studio & Werkruimte</h1>
     </div>
   </div>
-  <div class="header-right">
-    <div id="updated" style="color:var(--muted);font-size:.72rem">—</div>
+  <div class="header-meta">
+    <span class="pill">📍 Nijmegen</span>
+    <span class="pill">💶 Max €700 / maand</span>
+    <span class="pill">📐 Min 15 m²</span>
+    <span class="pill mp"><span class="pill-dot"></span> Marktplaats</span>
+    <span class="pill funda"><span class="pill-dot"></span> Funda in Business</span>
   </div>
+  <div class="updated-text" id="updated-text">Laden...</div>
 </header>
 
 <div class="toolbar">
   <span id="count-label"></span>
   <div class="sort-wrap">
+    Sorteer op
     <select id="sort-select">
       <option value="date">Nieuwste eerst</option>
-      <option value="price-asc">Prijs ↑</option>
-      <option value="price-desc">Prijs ↓</option>
-      <option value="area-asc">Oppervlakte ↑</option>
+      <option value="price-asc">Prijs laag → hoog</option>
+      <option value="price-desc">Prijs hoog → laag</option>
+      <option value="area-asc">Oppervlakte klein → groot</option>
     </select>
   </div>
 </div>
 
 <div class="grid" id="grid">
-  <div class="state">Laden...</div>
+  <div class="state-full">Laden...</div>
 </div>
 
 <script>
-const SRC = {
-  marktplaats:     { label: 'Marktplaats',       cls: 'src-marktplaats' },
-  fundainbusiness: { label: 'Funda in Business', cls: 'src-fundainbusiness' },
+const BADGE = {
+  marktplaats:     { label: 'Marktplaats',      cls: 'badge-marktplaats' },
+  fundainbusiness: { label: 'Funda in Business', cls: 'badge-fundainbusiness' },
 };
 
 const PLACEHOLDER = `<div class="card-img-placeholder">
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.2">
     <rect x="3" y="3" width="18" height="18" rx="2"/>
     <circle cx="8.5" cy="8.5" r="1.5"/>
     <polyline points="21 15 16 10 5 21"/>
@@ -310,39 +316,36 @@ const PLACEHOLDER = `<div class="card-img-placeholder">
 </div>`;
 
 function esc(s) {
-  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(s ?? '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 function renderCard(l) {
-  const src = SRC[l.source] || { label: l.source, cls: '' };
+  const b = BADGE[l.source] || { label: l.source, cls: '' };
 
   const imgHtml = l.image
-    ? `<img class="card-img" src="${esc(l.image)}" alt="" loading="lazy"
-         onerror="this.parentNode.innerHTML='${PLACEHOLDER.replace(/'/g, "\\'")}'">`
+    ? `<img class="card-img" src="${esc(l.image)}" alt="" loading="lazy" onerror="this.parentNode.innerHTML='${PLACEHOLDER.replace(/'/g,"\\'")}'">`
     : PLACEHOLDER;
 
-  const priceBadge = l.price != null
-    ? `<div class="price-badge">€${Math.round(l.price).toLocaleString('nl-NL')}<span style="font-size:.6em;font-weight:500;opacity:.7">/mnd</span></div>`
-    : `<div class="price-badge unknown">Prijs onbekend</div>`;
+  const price = l.price != null
+    ? `<div class="stat"><div class="stat-value">€${Math.round(l.price)}</div><div class="stat-label">per maand</div></div>`
+    : `<div class="stat"><div class="stat-value unknown">—</div><div class="stat-label">prijs onbekend</div></div>`;
 
-  const areaBadge = l.area != null
-    ? `<span class="area-tag">${Math.round(l.area)} m²</span>`
+  const area = l.area != null
+    ? `<div class="stat"><div class="stat-value">${Math.round(l.area)} m²</div><div class="stat-label">oppervlakte</div></div>`
     : '';
 
   return `
     <div class="card">
-      <a href="${esc(l.url)}" target="_blank" rel="noopener">
-        <div class="card-img-wrap">
-          ${imgHtml}
-          ${priceBadge}
-          <span class="source-badge ${src.cls}">${src.label}</span>
-        </div>
+      <a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">
+        ${imgHtml}
         <div class="card-body">
-          <div class="card-title">${esc(l.title)}</div>
-          <div class="card-meta">
-            ${areaBadge}
-            <span class="date-tag">${esc(l.found_at || '')}</span>
+          <div class="card-header-row">
+            <span class="source-badge ${b.cls}">${b.label}</span>
+            <span class="card-date">${esc(l.found_at || '')}</span>
           </div>
+          <div class="card-title">${esc(l.title)}</div>
+          <div class="card-stats">${price}${area}</div>
         </div>
       </a>
     </div>`;
@@ -350,34 +353,50 @@ function renderCard(l) {
 
 let allListings = [];
 
-function sort(arr, by) {
-  const a = [...arr];
-  if (by === 'price-asc')  a.sort((x,y) => (x.price ?? Infinity) - (y.price ?? Infinity));
-  if (by === 'price-desc') a.sort((x,y) => (y.price ?? -1) - (x.price ?? -1));
-  if (by === 'area-asc')   a.sort((x,y) => (x.area ?? Infinity) - (y.area ?? Infinity));
-  return a;
+function applySort(listings, sort) {
+  const arr = [...listings];
+  if (sort === 'price-asc')  arr.sort((a,b) => (a.price ?? Infinity) - (b.price ?? Infinity));
+  if (sort === 'price-desc') arr.sort((a,b) => (b.price ?? -1) - (a.price ?? -1));
+  if (sort === 'area-asc')   arr.sort((a,b) => (a.area ?? Infinity) - (b.area ?? Infinity));
+  // default: date — keep original order (newest first from scraper)
+  return arr;
 }
 
 function render() {
-  const sorted = sort(allListings, document.getElementById('sort-select').value);
+  const sort = document.getElementById('sort-select').value;
+  const sorted = applySort(allListings, sort);
   const grid = document.getElementById('grid');
-  grid.innerHTML = sorted.length
-    ? sorted.map(renderCard).join('')
-    : '<div class="state">Geen ruimtes gevonden.</div>';
+
+  if (sorted.length === 0) {
+    grid.innerHTML = '<div class="state-full">Geen ruimtes gevonden op dit moment.</div>';
+  } else {
+    grid.innerHTML = sorted.map(renderCard).join('');
+  }
 }
 
 document.getElementById('sort-select').addEventListener('change', render);
 
 async function load() {
   try {
-    const data = await fetch('./listings.json?' + Date.now()).then(r => r.json());
-    document.getElementById('updated').textContent = data.last_updated ? `Bijgewerkt: ${data.last_updated}` : '';
+    const res = await fetch('./listings.json?' + Date.now());
+    if (!res.ok) throw new Error(res.status);
+    const data = await res.json();
+
+    document.getElementById('updated-text').textContent =
+      data.last_updated ? `Bijgewerkt: ${data.last_updated}` : 'Nog niet bijgewerkt';
+
     allListings = data.listings || [];
+
     const n = allListings.length;
-    document.getElementById('count-label').innerHTML = `<b>${n}</b> ruimte${n !== 1 ? 's' : ''} gevonden`;
+    document.getElementById('count-label').innerHTML =
+      `<strong>${n}</strong> ruimte${n !== 1 ? 's' : ''} gevonden`;
+
     render();
-  } catch {
-    document.getElementById('grid').innerHTML = '<div class="state">Laden mislukt.</div>';
+  } catch (e) {
+    document.getElementById('grid').innerHTML =
+      '<div class="state-full">Kon listings niet laden.</div>';
+    document.getElementById('updated-text').textContent = '';
+    console.error(e);
   }
 }
 
