@@ -110,7 +110,21 @@ def fetch_marktplaats():
                         break
 
                 full_text = container.get_text(" ", strip=True)
-                title = a.get_text(strip=True)[:120] or full_text[:80]
+
+                # Title: first meaningful span/h3 inside the anchor, not the full blob
+                title_el = a.find(["h3", "span", "p"])
+                if title_el:
+                    title = title_el.get_text(strip=True)[:120]
+                else:
+                    title = a.get_text(strip=True)[:120]
+
+                # Image: src or data-src on first img in container
+                img_tag = container.find("img")
+                image = None
+                if img_tag:
+                    image = img_tag.get("src") or img_tag.get("data-src") or img_tag.get("data-lazy-src")
+                    if image and image.startswith("//"):
+                        image = "https:" + image
 
                 price = None
                 price_m = re.search(r"€\s*([\d.,]+)", full_text)
@@ -125,6 +139,7 @@ def fetch_marktplaats():
                     "title": title,
                     "price": price,
                     "area": area,
+                    "image": image,
                     "url": f"https://www.marktplaats.nl{href}" if href.startswith("/") else href,
                     "found_at": datetime.now().strftime("%Y-%m-%d"),
                 })
@@ -201,6 +216,13 @@ def fetch_fundainbusiness():
 
             area = parse_area(full_text)
 
+            img_tag = card.find("img")
+            image = None
+            if img_tag:
+                image = img_tag.get("src") or img_tag.get("data-src")
+                if image and image.startswith("//"):
+                    image = "https:" + image
+
             full_url = f"https://www.fundainbusiness.nl{href}" if href.startswith("/") else href
 
             listings.append({
@@ -209,6 +231,7 @@ def fetch_fundainbusiness():
                 "title": title,
                 "price": price,
                 "area": area,
+                "image": image,
                 "url": full_url,
                 "found_at": datetime.now().strftime("%Y-%m-%d"),
             })
