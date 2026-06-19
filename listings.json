@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18 11:54:01",
+  "last_updated": "2026-06-19 12:11:59",
   "listings": [
     {
       "id": "mp_m2403167074",
@@ -9,17 +9,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52ce026e-f82c-42d0-8886-c62fb4f96582?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2403167074-bedrijfsruimte-te-huur-nijmegen-weurt-de-vlotkampweg",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "mp_m2395369859",
-      "source": "marktplaats",
-      "title": "Te huur bedrijfsruimte in Druten, vlakbij Nijmegen en Tiel",
-      "price": 575.0,
-      "area": 56.0,
-      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3749c4b0-5b76-43e1-8afa-d56315896a23?rule=ecg_mp_eps$_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2395369859-te-huur-bedrijfsruimte-in-druten-vlakbij-nijmegen-en-tiel",
-      "found_at": "2026-06-18"
+      "found_at": "2026-06-19"
     },
     {
       "id": "mp_m2410851175",
@@ -29,17 +19,7 @@
       "area": 30.0,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9b0bd207-91c8-4061-8f7d-79da58b9c187?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2410851175-bedrijfshal-30m2-met-hoge-plafonds-en-roldeur",
-      "found_at": "2026-06-18"
-    },
-    {
-      "id": "mp_m2407408167",
-      "source": "marktplaats",
-      "title": "Ruimte te huur  omgeving Bemmel/ressen",
-      "price": 1000.0,
-      "area": 20.0,
-      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0cd8ae86-f49d-43e9-95ed-9d1c2e73ed26?rule=ecg_mp_eps$_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2407408167-ruimte-te-huur-omgeving-bemmel-ressen",
-      "found_at": "2026-06-18"
+      "found_at": "2026-06-19"
     },
     {
       "id": "funda_8037450",
@@ -49,7 +29,7 @@
       "area": 35.0,
       "image": "https://cloud.funda.nl/valentina_media/230/280/936_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-80846459-berg-en-dalseweg-101/",
-      "found_at": "2026-06-18"
+      "found_at": "2026-06-19"
     },
     {
       "id": "funda_8028784",
@@ -59,7 +39,7 @@
       "area": 115.0,
       "image": "https://cloud.funda.nl/valentina_media/229/920/048_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44473147-kerkenbos-1079-h/",
-      "found_at": "2026-06-18"
+      "found_at": "2026-06-19"
     },
     {
       "id": "funda_8023849",
@@ -69,7 +49,7 @@
       "area": 47.0,
       "image": "https://cloud.funda.nl/valentina_media/229/724/336_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44478202-bredestraat-170/",
-      "found_at": "2026-06-18"
+      "found_at": "2026-06-19"
     },
     {
       "id": "funda_8022142",
@@ -79,7 +59,7 @@
       "area": 120.0,
       "image": "https://cloud.funda.nl/valentina_media/229/653/754_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44477505-kerkenbos-1230-a/",
-      "found_at": "2026-06-18"
+      "found_at": "2026-06-19"
     }
   ]
 }
