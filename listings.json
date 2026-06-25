@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-24 10:55:16",
+  "last_updated": "2026-06-25 10:47:07",
   "listings": [
     {
       "id": "mp_m2403167074",
@@ -9,17 +9,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52ce026e-f82c-42d0-8886-c62fb4f96582?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2403167074-bedrijfsruimte-te-huur-nijmegen-weurt-de-vlotkampweg",
-      "found_at": "2026-06-24"
-    },
-    {
-      "id": "mp_m2410851175",
-      "source": "marktplaats",
-      "title": "Bedrijfshal 30m² met Hoge Plafonds en Roldeur",
-      "price": 490.0,
-      "area": 30.0,
-      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9b0bd207-91c8-4061-8f7d-79da58b9c187?rule=ecg_mp_eps$_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2410851175-bedrijfshal-30m2-met-hoge-plafonds-en-roldeur",
-      "found_at": "2026-06-24"
+      "found_at": "2026-06-25"
     },
     {
       "id": "mp_m2125527455",
@@ -29,7 +19,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d7/d70befd3-db2c-4faa-bf39-e9e775322f70?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2125527455-te-koop-nieuwbouw-bedrijfshal-te-bijsterhuizen-in-nijmegen",
-      "found_at": "2026-06-24"
+      "found_at": "2026-06-25"
     },
     {
       "id": "funda_8037450",
@@ -39,7 +29,7 @@
       "area": 35.0,
       "image": "https://cloud.funda.nl/valentina_media/230/280/936_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-80846459-berg-en-dalseweg-101/",
-      "found_at": "2026-06-24"
+      "found_at": "2026-06-25"
     },
     {
       "id": "funda_8028784",
@@ -49,7 +39,7 @@
       "area": 115.0,
       "image": "https://cloud.funda.nl/valentina_media/229/920/048_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44473147-kerkenbos-1079-h/",
-      "found_at": "2026-06-24"
+      "found_at": "2026-06-25"
     },
     {
       "id": "funda_8023849",
@@ -59,7 +49,7 @@
       "area": 47.0,
       "image": "https://cloud.funda.nl/valentina_media/229/724/336_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44478202-bredestraat-170/",
-      "found_at": "2026-06-24"
+      "found_at": "2026-06-25"
     }
   ]
 }
