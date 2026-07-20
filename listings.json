@@ -1,16 +1,6 @@
 {
-  "last_updated": "2026-07-19 09:55:06",
+  "last_updated": "2026-07-20 10:56:39",
   "listings": [
-    {
-      "id": "mp_m2414878927",
-      "source": "marktplaats",
-      "title": "Te huur bedrijfsruimte - tussen Nijmegen en Tiel (Druten)",
-      "price": 995.0,
-      "area": 112.0,
-      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5433e027-ede1-4d78-8e73-be469423f377?rule=ecg_mp_eps$_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2414878927-te-huur-bedrijfsruimte-tussen-nijmegen-en-tiel-druten",
-      "found_at": "2026-07-19"
-    },
     {
       "id": "mp_m2403167074",
       "source": "marktplaats",
@@ -19,7 +9,17 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52ce026e-f82c-42d0-8886-c62fb4f96582?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2403167074-bedrijfsruimte-te-huur-nijmegen-weurt-de-vlotkampweg",
-      "found_at": "2026-07-19"
+      "found_at": "2026-07-20"
+    },
+    {
+      "id": "mp_m2414878927",
+      "source": "marktplaats",
+      "title": "Te huur bedrijfsruimte - tussen Nijmegen en Tiel (Druten)",
+      "price": 995.0,
+      "area": 112.0,
+      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5433e027-ede1-4d78-8e73-be469423f377?rule=ecg_mp_eps$_83",
+      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2414878927-te-huur-bedrijfsruimte-tussen-nijmegen-en-tiel-druten",
+      "found_at": "2026-07-20"
     },
     {
       "id": "mp_m2417827160",
@@ -29,7 +29,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5b5cd2ac-eb70-41bd-8600-913175217769?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2417827160-bedrijfshal-ruimte-te-huur-arnhem-vlamoven",
-      "found_at": "2026-07-19"
+      "found_at": "2026-07-20"
     },
     {
       "id": "mp_m2125527455",
@@ -39,67 +39,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d7/d70befd3-db2c-4faa-bf39-e9e775322f70?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2125527455-te-koop-nieuwbouw-bedrijfshal-te-bijsterhuizen-in-nijmegen",
-      "found_at": "2026-07-19"
-    },
-    {
-      "id": "mp_a1519103088",
-      "source": "marktplaats",
-      "title": "Kantoorruimte in Regus City Centre",
-      "price": 829.0,
-      "area": null,
-      "image": "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/34/349a42bf-8e70-4497-8e86-27f1af5bdd89?rule=eps_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/a1519103088-kantoorruimte-in-regus-city-centre",
-      "found_at": "2026-07-19"
-    },
-    {
-      "id": "mp_a1519103574",
-      "source": "marktplaats",
-      "title": "Kantoorruimte in Regus Oranjesingel",
-      "price": 559.0,
-      "area": null,
-      "image": "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/c0/c0a5727f-1a95-4c6c-be6b-3369c37fdd19?rule=eps_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/a1519103574-kantoorruimte-in-regus-oranjesingel",
-      "found_at": "2026-07-19"
-    },
-    {
-      "id": "mp_a1519103585",
-      "source": "marktplaats",
-      "title": "Kantoorruimte in Regus Oranjesingel",
-      "price": 679.0,
-      "area": null,
-      "image": "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/86/86ecf062-cb85-479e-85da-0b9c59a08928?rule=eps_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/a1519103585-kantoorruimte-in-regus-oranjesingel",
-      "found_at": "2026-07-19"
-    },
-    {
-      "id": "mp_a1519103096",
-      "source": "marktplaats",
-      "title": "Kantoorruimte in Regus City Centre",
-      "price": 429.0,
-      "area": null,
-      "image": "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/49/492e86e3-786a-495a-906c-6be4ebbdc911?rule=eps_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/a1519103096-kantoorruimte-in-regus-city-centre",
-      "found_at": "2026-07-19"
-    },
-    {
-      "id": "mp_a1519102941",
-      "source": "marktplaats",
-      "title": "Kantoorruimte in Regus City Centre",
-      "price": 559.0,
-      "area": null,
-      "image": "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/9d/9d147d47-0874-4a14-95e0-01c3cd214fb4?rule=eps_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/a1519102941-kantoorruimte-in-regus-city-centre",
-      "found_at": "2026-07-19"
-    },
-    {
-      "id": "mp_a1519103564",
-      "source": "marktplaats",
-      "title": "Coworkingruimte in Regus Oranjesingel",
-      "price": 259.0,
-      "area": null,
-      "image": "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/c9/c9f8f6e0-cef6-4b27-9203-59bc96e40cbc?rule=eps_83",
-      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/a1519103564-coworkingruimte-in-regus-oranjesingel",
-      "found_at": "2026-07-19"
+      "found_at": "2026-07-20"
     },
     {
       "id": "mp_m2419916104",
@@ -109,7 +49,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/35e44b40-3ff4-4043-9808-57db5df21c1f?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2419916104-kantoor-studio-ruimte-te-huur-in-heinenoord",
-      "found_at": "2026-07-19"
+      "found_at": "2026-07-20"
     },
     {
       "id": "funda_8086453",
@@ -119,7 +59,7 @@
       "area": 400.0,
       "image": "https://cloud.funda.nl/valentina_media/232/150/818_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44431816-hoeksehofstraat-9/",
-      "found_at": "2026-07-19"
+      "found_at": "2026-07-20"
     },
     {
       "id": "funda_8082103",
@@ -129,7 +69,7 @@
       "area": 140.0,
       "image": "https://cloud.funda.nl/valentina_media/231/995/080_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44437566-lagelandseweg-52/",
-      "found_at": "2026-07-19"
+      "found_at": "2026-07-20"
     },
     {
       "id": "funda_8078922",
@@ -139,7 +79,7 @@
       "area": 35.0,
       "image": "https://cloud.funda.nl/valentina_media/231/885/674_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-80887921-heidebloemstraat/",
-      "found_at": "2026-07-19"
+      "found_at": "2026-07-20"
     },
     {
       "id": "funda_8037450",
@@ -149,7 +89,7 @@
       "area": 35.0,
       "image": "https://cloud.funda.nl/valentina_media/230/280/936_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-80846459-berg-en-dalseweg-101/",
-      "found_at": "2026-07-19"
+      "found_at": "2026-07-20"
     }
   ]
 }
