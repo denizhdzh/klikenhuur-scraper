@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-02 10:00:44",
+  "last_updated": "2026-08-03 11:29:41",
   "listings": [
     {
       "id": "mp_m2407408167",
@@ -9,7 +9,7 @@
       "area": 20.0,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0cd8ae86-f49d-43e9-95ed-9d1c2e73ed26?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2407408167-ruimte-te-huur-omgeving-bemmel-ressen",
-      "found_at": "2026-08-02"
+      "found_at": "2026-08-03"
     },
     {
       "id": "mp_m2403167074",
@@ -19,7 +19,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52ce026e-f82c-42d0-8886-c62fb4f96582?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2403167074-bedrijfsruimte-te-huur-nijmegen-vanaf-295",
-      "found_at": "2026-08-02"
+      "found_at": "2026-08-03"
     },
     {
       "id": "mp_m2417827160",
@@ -29,7 +29,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5b5cd2ac-eb70-41bd-8600-913175217769?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2417827160-bedrijfshal-ruimte-te-huur-arnhem-vlamoven",
-      "found_at": "2026-08-02"
+      "found_at": "2026-08-03"
     },
     {
       "id": "mp_m2419916104",
@@ -39,7 +39,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/35e44b40-3ff4-4043-9808-57db5df21c1f?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2419916104-kantoor-studio-ruimte-te-huur-in-heinenoord",
-      "found_at": "2026-08-02"
+      "found_at": "2026-08-03"
     },
     {
       "id": "funda_8090568",
@@ -49,7 +49,7 @@
       "area": 22.0,
       "image": "https://cloud.funda.nl/valentina_media/232/292/644_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44445921-lankforst-1410/",
-      "found_at": "2026-08-02"
+      "found_at": "2026-08-03"
     },
     {
       "id": "funda_8086453",
@@ -59,7 +59,7 @@
       "area": 400.0,
       "image": "https://cloud.funda.nl/valentina_media/232/150/818_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44431816-hoeksehofstraat-9/",
-      "found_at": "2026-08-02"
+      "found_at": "2026-08-03"
     },
     {
       "id": "funda_8082103",
@@ -69,7 +69,7 @@
       "area": 140.0,
       "image": "https://cloud.funda.nl/valentina_media/231/995/080_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44437566-lagelandseweg-52/",
-      "found_at": "2026-08-02"
+      "found_at": "2026-08-03"
     },
     {
       "id": "funda_8078922",
@@ -79,7 +79,7 @@
       "area": 35.0,
       "image": "https://cloud.funda.nl/valentina_media/231/885/674_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-80887921-heidebloemstraat/",
-      "found_at": "2026-08-02"
+      "found_at": "2026-08-03"
     }
   ]
 }
