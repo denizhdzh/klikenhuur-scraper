@@ -1,6 +1,16 @@
 {
-  "last_updated": "2026-09-13 13:12:07",
+  "last_updated": "2026-09-14 14:52:23",
   "listings": [
+    {
+      "id": "mp_m2403167074",
+      "source": "marktplaats",
+      "title": "Bedrijfsruimte  te huur Nijmegen vanaf €295,-!!",
+      "price": 295.0,
+      "area": null,
+      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52ce026e-f82c-42d0-8886-c62fb4f96582?rule=ecg_mp_eps$_83",
+      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2403167074-bedrijfsruimte-te-huur-nijmegen-vanaf-295",
+      "found_at": "2026-09-14"
+    },
     {
       "id": "mp_m2419916104",
       "source": "marktplaats",
@@ -9,7 +19,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/35e44b40-3ff4-4043-9808-57db5df21c1f?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2419916104-kantoor-studio-ruimte-te-huur-in-heinenoord",
-      "found_at": "2026-09-13"
+      "found_at": "2026-09-14"
     },
     {
       "id": "funda_8139601",
@@ -19,7 +29,7 @@
       "area": 250.0,
       "image": "https://cloud.funda.nl/valentina_media/234/272/836_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44584064-kerkenbos-1230-1234/",
-      "found_at": "2026-09-13"
+      "found_at": "2026-09-14"
     },
     {
       "id": "funda_8119496",
@@ -29,7 +39,7 @@
       "area": 78.0,
       "image": "https://cloud.funda.nl/valentina_media/233/431/839_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44564859-bijsterhuizen-1148-g57/",
-      "found_at": "2026-09-13"
+      "found_at": "2026-09-14"
     }
   ]
 }
