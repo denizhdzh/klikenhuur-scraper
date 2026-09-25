@@ -1,6 +1,16 @@
 {
-  "last_updated": "2026-09-24 13:24:20",
+  "last_updated": "2026-09-25 13:26:24",
   "listings": [
+    {
+      "id": "mp_m2407408167",
+      "source": "marktplaats",
+      "title": "Ruimte te huur  omgeving Bemmel/ressen",
+      "price": 1000.0,
+      "area": 20.0,
+      "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0cd8ae86-f49d-43e9-95ed-9d1c2e73ed26?rule=ecg_mp_eps$_83",
+      "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2407408167-ruimte-te-huur-omgeving-bemmel-ressen",
+      "found_at": "2026-09-25"
+    },
     {
       "id": "mp_m2419916104",
       "source": "marktplaats",
@@ -9,7 +19,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/35e44b40-3ff4-4043-9808-57db5df21c1f?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2419916104-kantoor-studio-ruimte-te-huur-in-heinenoord",
-      "found_at": "2026-09-24"
+      "found_at": "2026-09-25"
     },
     {
       "id": "funda_8139601",
@@ -19,7 +29,7 @@
       "area": 250.0,
       "image": "https://cloud.funda.nl/valentina_media/234/272/836_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44584064-kerkenbos-1230-1234/",
-      "found_at": "2026-09-24"
+      "found_at": "2026-09-25"
     },
     {
       "id": "funda_8119496",
@@ -29,7 +39,7 @@
       "area": 78.0,
       "image": "https://cloud.funda.nl/valentina_media/233/431/839_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44564859-bijsterhuizen-1148-g57/",
-      "found_at": "2026-09-24"
+      "found_at": "2026-09-25"
     }
   ]
 }
