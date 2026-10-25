@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-24 12:31:15",
+  "last_updated": "2026-10-25 13:04:12",
   "listings": [
     {
       "id": "mp_m2403167074",
@@ -9,7 +9,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52ce026e-f82c-42d0-8886-c62fb4f96582?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2403167074-bedrijfsruimte-te-huur-nijmegen-vanaf-295",
-      "found_at": "2026-10-24"
+      "found_at": "2026-10-25"
     },
     {
       "id": "mp_m2407408167",
@@ -19,7 +19,7 @@
       "area": 20.0,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0cd8ae86-f49d-43e9-95ed-9d1c2e73ed26?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2407408167-ruimte-te-huur-omgeving-bemmel-ressen",
-      "found_at": "2026-10-24"
+      "found_at": "2026-10-25"
     },
     {
       "id": "mp_m2451829033",
@@ -29,7 +29,7 @@
       "area": 2000.0,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/abb1da01-ec08-41fd-91de-9df93dd8c34f?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2451829033-3x-woningen-met-bedrijfs-kantoren-praktijk-verhuur-ruimtes",
-      "found_at": "2026-10-24"
+      "found_at": "2026-10-25"
     },
     {
       "id": "funda_8203204",
@@ -39,7 +39,7 @@
       "area": 78.0,
       "image": "https://cloud.funda.nl/valentina_media/236/835/228_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44658667-bijsterhuizen-1148-g42/",
-      "found_at": "2026-10-24"
+      "found_at": "2026-10-25"
     },
     {
       "id": "funda_8190335",
@@ -49,7 +49,7 @@
       "area": 102.0,
       "image": "https://cloud.funda.nl/valentina_media/236/302/818_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44545798-bijsterhuizen-1102-g56/",
-      "found_at": "2026-10-24"
+      "found_at": "2026-10-25"
     },
     {
       "id": "funda_8188067",
@@ -59,7 +59,7 @@
       "area": 70.0,
       "image": "https://cloud.funda.nl/valentina_media/236/215/760_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44533420-bijsterhuizen-1102-g9/",
-      "found_at": "2026-10-24"
+      "found_at": "2026-10-25"
     },
     {
       "id": "funda_8177964",
@@ -69,7 +69,7 @@
       "area": 22.0,
       "image": "https://cloud.funda.nl/valentina_media/236/597/212_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44522327-lankforst-1416/",
-      "found_at": "2026-10-24"
+      "found_at": "2026-10-25"
     },
     {
       "id": "funda_8173238",
@@ -79,7 +79,7 @@
       "area": 31.0,
       "image": "https://cloud.funda.nl/valentina_media/235/638/370_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/kantoor/nijmegen/object-44528691-daalseweg-236/",
-      "found_at": "2026-10-24"
+      "found_at": "2026-10-25"
     },
     {
       "id": "funda_8168539",
@@ -89,7 +89,7 @@
       "area": 16.0,
       "image": "https://cloud.funda.nl/valentina_media/235/453/655_720x480.jpg",
       "url": "https://www.fundainbusiness.nl/bedrijfshal/nijmegen/object-44513992-energieweg-4/",
-      "found_at": "2026-10-24"
+      "found_at": "2026-10-25"
     }
   ]
 }
