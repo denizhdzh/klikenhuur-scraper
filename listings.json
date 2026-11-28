@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-27 17:57:24",
+  "last_updated": "2026-11-28 16:42:56",
   "listings": [
     {
       "id": "mp_m2125527455",
@@ -9,7 +9,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d7/d70befd3-db2c-4faa-bf39-e9e775322f70?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2125527455-te-koop-nieuwbouw-bedrijfshal-te-bijsterhuizen-in-nijmegen",
-      "found_at": "2026-11-27"
+      "found_at": "2026-11-28"
     },
     {
       "id": "mp_m2470400262",
@@ -19,7 +19,7 @@
       "area": 80.0,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1f011acd-e364-4411-bed3-30a428f3bf2b?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2470400262-te-huur-bedrijfsruimte-80-m2-wijchen-bijsterhuizen",
-      "found_at": "2026-11-27"
+      "found_at": "2026-11-28"
     },
     {
       "id": "mp_m2407408167",
@@ -29,7 +29,7 @@
       "area": 20.0,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0cd8ae86-f49d-43e9-95ed-9d1c2e73ed26?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2407408167-ruimte-te-huur-omgeving-bemmel-ressen",
-      "found_at": "2026-11-27"
+      "found_at": "2026-11-28"
     },
     {
       "id": "mp_m2403167074",
@@ -39,7 +39,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52ce026e-f82c-42d0-8886-c62fb4f96582?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2403167074-bedrijfsruimte-te-huur-nijmegen-vanaf-395-excl-btw",
-      "found_at": "2026-11-27"
+      "found_at": "2026-11-28"
     },
     {
       "id": "mp_m2466477855",
@@ -49,7 +49,7 @@
       "area": 24.0,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/602458ce-fc31-403d-82be-b48a88c4568b?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2466477855-praktijkruimte-huren-in-nijmegen-40-per-dagdeel",
-      "found_at": "2026-11-27"
+      "found_at": "2026-11-28"
     },
     {
       "id": "mp_m2464100014",
@@ -59,7 +59,7 @@
       "area": null,
       "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ac07d3af-6bb8-4eb7-b111-93e7ad1ca608?rule=ecg_mp_eps$_83",
       "url": "https://www.marktplaats.nl/v/zakelijke-goederen/bedrijfs-onroerend-goed/m2464100014-fysio-ruimte-nijmegen-te-huur-per-uur-dag-deel-maand",
-      "found_at": "2026-11-27"
+      "found_at": "2026-11-28"
     }
   ]
 }
